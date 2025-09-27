@@ -1,0 +1,52 @@
+<Project>
+  <!-- Global properties for all projects in the solution -->
+  <PropertyGroup>
+    <!-- Version Information -->
+    <MajorVersion>1</MajorVersion>
+    <MinorVersion>0</MinorVersion>
+    <PatchVersion>0</PatchVersion>
+    <PreReleaseLabel></PreReleaseLabel>
+    
+    <!-- Computed version -->
+    <VersionPrefix>$(MajorVersion).$(MinorVersion).$(PatchVersion)</VersionPrefix>
+    <VersionSuffix Condition="'$(PreReleaseLabel)' != ''">$(PreReleaseLabel)</VersionSuffix>
+    
+    <!-- Common Assembly Information -->
+    <Company>Conflux</Company>
+    <Product>Conflux.Paginize</Product>
+    <Copyright>Copyright © Conflux $([System.DateTime]::Now.Year)</Copyright>
+    
+    <!-- Build Configuration -->
+    <TreatWarningsAsErrors Condition="'$(Configuration)' == 'Release'">true</TreatWarningsAsErrors>
+    <WarningsAsErrors Condition="'$(Configuration)' == 'Release'" />
+    <WarningLevel>5</WarningLevel>
+    
+    <!-- Code Analysis -->
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    
+    <!-- Repository Information -->
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://dev.azure.com/[YourOrganization]/[YourProject]/_git/Conflux.Paginize</RepositoryUrl>
+    <RepositoryBranch>main</RepositoryBranch>
+    
+    <!-- Package defaults -->
+    <Authors>Conflux Development Team</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageProjectUrl>https://dev.azure.com/[YourOrganization]/[YourProject]</PackageProjectUrl>
+    <PackageTags>conflux;pagination;sorting;linq;data</PackageTags>
+  </PropertyGroup>
+  
+  <!-- Source Link for Azure DevOps -->
+  <ItemGroup Condition="'$(EnableSourceLink)' != 'false'">
+    <PackageReference Include="Microsoft.SourceLink.AzureRepos.Git" Version="8.0.0" PrivateAssets="All" />
+  </ItemGroup>
+  
+  <!-- Development dependencies -->
+  <ItemGroup Condition="'$(EnableCodeAnalysis)' == 'true'">
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="8.0.0" PrivateAssets="All" />
+  </ItemGroup>
+</Project>

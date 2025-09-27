@@ -1,0 +1,17 @@
+name: Publish via CI Template
+
+on:
+  push:
+    branches:
+      - master
+      - main
+
+permissions:
+  contents: write
+  id-token: write  # Required for Trusted Publishing
+
+jobs:
+  publish:
+    uses: bugzyGeek/ci-templates/.github/workflows/nuget-publish.yml@main
+    with:
+      dotnet-version: '8.0.x'
