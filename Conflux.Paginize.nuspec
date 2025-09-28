@@ -22,8 +22,8 @@
     </releaseNotes>
     <summary>Advanced pagination and sorting library for .NET applications with Filter-based API</summary>
     <language>en-US</language>
-    <projectUrl>$projectUrl$</projectUrl>
-    <repository type="git" url="$repositoryUrl$" />
+	<projectUrl>$projectUrl$</projectUrl>
+	<repository type="git" url="$repositoryUrl$"/>
     <license type="expression">MIT</license>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>pagination sorting linq queryable enumerable paging data filter api clean-architecture</tags>
