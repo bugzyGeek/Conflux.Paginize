@@ -2,7 +2,9 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Conflux.Paginize</id>
-    <version>$version$</version>
+	<version>$version$</version>
+	<projectUrl>$projectUrl$</projectUrl>
+	<repositoryUrl>$repositoryUrl$</repositoryUrl>
     <title>Conflux.Paginize</title>
     <authors>Conflux Development Team</authors>
     <owners>Conflux</owners>
@@ -22,8 +24,6 @@
     </releaseNotes>
     <summary>Advanced pagination and sorting library for .NET applications with Filter-based API</summary>
     <language>en-US</language>
-    <projectUrl>$projectUrl$</projectUrl>
-    <repository type="git" url="$repositoryUrl$" />
     <license type="expression">MIT</license>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>pagination sorting linq queryable enumerable paging data filter api clean-architecture</tags>
